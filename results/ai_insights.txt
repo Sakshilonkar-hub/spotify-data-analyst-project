@@ -1,0 +1,9 @@
+artist_name,play_count,minutes_listened
+Dua Lipa,4,13.5
+Miley Cyrus,4,13.32
+Sabrina Carpenter,3,8.76
+Harry Styles,3,8.34
+Sza,3,7.65
+Glass Animals,2,7.94
+Rema,2,6.14
+Morgan Wallen,2,5.44

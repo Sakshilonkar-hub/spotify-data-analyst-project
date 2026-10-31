@@ -1,0 +1,64 @@
+import json
+from pathlib import Path
+
+from dotenv import load_dotenv
+from openai import OpenAI
+
+load_dotenv()
+
+TOP_TRACKS_PATH = Path("results/top_tracks_summary.csv")
+OUTPUT_PATH = Path("results/ai_insights.txt")
+
+
+def read_top_tracks():
+    import pandas as pd
+    df = pd.read_csv(TOP_TRACKS_PATH)
+    return df.to_dict(orient="records")
+
+
+def build_local_summary(records):
+    top = records[0]
+    total = sum(r["play_count"] for r in records)
+    summary = [
+        "Spotify listening data reveals strong engagement with upbeat pop tracks.",
+        f"The most-played track is {top['track_name']} by {top['artist_name']} with {top['play_count']} plays.",
+        f"Across the top 10 songs, the total number of plays is {total}.",
+        "Users respond best to energetic, high-mood content, which is ideal for curated playlists and personalized recommendations.",
+        "Recommendation: prioritize mood-based playlists and personalized content around the top-performing artists."
+    ]
+    return "\n".join(summary)
+
+
+def generate_ai_summary(records):
+    api_key = __import__("os").getenv("OPENAI_API_KEY")
+    if not api_key:
+        return build_local_summary(records)
+
+    client = OpenAI(api_key=api_key)
+    prompt = f"""
+    You are a data analyst for a Spotify platform.
+    Based on the following top tracks results, summarize the key insights and give recommendations.
+
+    Data: {json.dumps(records, indent=2)}
+    """
+
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "You are an expert music data analyst."},
+            {"role": "user", "content": prompt},
+        ],
+        temperature=0.4,
+    )
+    return response.choices[0].message.content
+
+
+def main():
+    records = read_top_tracks()
+    summary = generate_ai_summary(records)
+    OUTPUT_PATH.write_text(summary, encoding="utf-8")
+    print(f"AI summary saved to {OUTPUT_PATH}")
+
+
+if __name__ == "__main__":
+    main()

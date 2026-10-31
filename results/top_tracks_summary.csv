@@ -1,0 +1,22 @@
+user_id,track_name,artist_name,album_name,played_at,duration_ms,popularity,energy,valence,genre,duration_minutes
+u001,Levitating,Dua Lipa,Future Nostalgia,2025-09-01 18:00:00,203000,92,0.82,0.88,pop,3.38
+u002,Flowers,Miley Cyrus,Endless Summer Vacation,2025-09-01 19:20:00,200000,95,0.79,0.8,pop,3.33
+u003,As It Was,Harry Styles,Harry's House,2025-09-02 07:10:00,167000,90,0.73,0.7,pop,2.78
+u004,Kill Bill,Sza,Sos,2025-09-02 21:30:00,153000,88,0.71,0.65,rnb,2.55
+u005,Espresso,Sabrina Carpenter,Short N' Sweet,2025-09-03 08:40:00,175000,91,0.76,0.82,pop,2.92
+u001,Levitating,Dua Lipa,Future Nostalgia,2025-09-03 18:05:00,203000,92,0.82,0.88,pop,3.38
+u006,Flowers,Miley Cyrus,Endless Summer Vacation,2025-09-03 20:15:00,200000,95,0.79,0.8,pop,3.33
+u007,Heat Waves,Glass Animals,Dreamland,2025-09-04 12:30:00,238000,89,0.69,0.75,indie,3.97
+u002,As It Was,Harry Styles,Harry's House,2025-09-04 16:20:00,167000,90,0.73,0.7,pop,2.78
+u005,Kill Bill,Sza,Sos,2025-09-05 22:45:00,153000,88,0.71,0.65,rnb,2.55
+u008,Last Night,Morgan Wallen,One Thing At A Time,2025-09-06 10:10:00,163000,85,0.67,0.6,country,2.72
+u009,Espresso,Sabrina Carpenter,Short N' Sweet,2025-09-06 14:25:00,175000,91,0.76,0.82,pop,2.92
+u010,Calm Down,Rema,Calm Down,2025-09-07 18:50:00,184000,86,0.63,0.71,afrobeats,3.07
+u001,Heat Waves,Glass Animals,Dreamland,2025-09-07 19:00:00,238000,89,0.69,0.75,indie,3.97
+u003,Calm Down,Rema,Calm Down,2025-09-08 11:05:00,184000,86,0.63,0.71,afrobeats,3.07
+u004,Levitating,Dua Lipa,Future Nostalgia,2025-09-08 20:50:00,203000,92,0.82,0.88,pop,3.38
+u011,Flowers,Miley Cyrus,Endless Summer Vacation,2025-09-09 09:25:00,200000,95,0.79,0.8,pop,3.33
+u012,Espresso,Sabrina Carpenter,Short N' Sweet,2025-09-09 21:00:00,175000,91,0.76,0.82,pop,2.92
+u013,As It Was,Harry Styles,Harry's House,2025-09-10 15:30:00,167000,90,0.73,0.7,pop,2.78
+u014,Kill Bill,Sza,Sos,2025-09-11 18:18:00,153000,88,0.71,0.65,rnb,2.55
+u015,Last Night,Morgan Wallen,One Thing At A Time,2025-09-11 19:48:00,163000,85,0.67,0.6,country,2.72
